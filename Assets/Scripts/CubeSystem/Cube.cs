@@ -3,48 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BaseCube : MonoBehaviour
+public class Cube : MonoBehaviour
 {
     
     public CubeData cubeData;
-    private Vector3 direction;
-    private float speed = 5;
-    private bool isMoving = false;
-    
 
-    
-    
+    [SerializeField]
+    private CubeMovement cubeMovement;
+  
     private void Start()
     {
         if (cubeData != null)
         {
-            direction = cubeData.SetDirection(direction);
+            cubeMovement.direction = cubeData.SetDirection();
 
         }
     }
 
     private void Update()
     {
-        if (isMoving)
+        if (cubeMovement.isMoving)
         {
-            Move();
+            cubeMovement.Move();
         }
-    }
-
-    private void Move()
-    {
-        transform.position += direction * speed * Time.deltaTime;
     }
 
     private void OnMouseDown()
     {
-        isMoving = true;
+        cubeMovement.isMoving = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        isMoving = false;
+        cubeMovement.isMoving = false;
         transform.DOLocalMove(new Vector3(Mathf.RoundToInt(transform.localPosition.x), Mathf.RoundToInt(transform.localPosition.y), Mathf.RoundToInt(transform.localPosition.z)), 1);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+    }
+
 }

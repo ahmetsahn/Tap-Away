@@ -7,8 +7,6 @@ using UnityEngine;
 public class CubeData : ScriptableObject
 {
     
-
-    
     public Directions directions;
 
     public enum Directions
@@ -21,33 +19,33 @@ public class CubeData : ScriptableObject
         back
     }
 
-    public Vector3 SetDirection(Vector3 direction)
+    public Vector3 SetDirection()
     {
         switch (directions)
         {
             case Directions.left:
-                direction = Vector3.left;
-                break;
+                return Vector3.left;
+               
             case Directions.right:
-                direction = Vector3.right;
-                break;
+                return Vector3.right;
+              
             case Directions.up:
-                direction = Vector3.up;
-                break;
+                return Vector3.up;
+               
             case Directions.down:
-                direction = Vector3.down;
-                break;
+                return Vector3.down;
+                
             case Directions.forward:
-                direction = Vector3.forward;
-                break;
+                return Vector3.forward;
+                
             case Directions.back:
-                direction = Vector3.back;
-                break;
+                return Vector3.back;
+                
             default:
                 break;
         }
 
-        return direction;
+        return Vector3.zero;
     }
 
     

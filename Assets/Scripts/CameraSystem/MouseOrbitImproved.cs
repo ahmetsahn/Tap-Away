@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class MouseOrbitImproved : MonoBehaviour
 {
-    public Transform target; // the object to orbit around
-    public float distance = 10.0f; // the distance from the target
-    public float sensitivity = 5.0f; // the sensitivity of the orbit
-
+    [SerializeField]
+    private Transform target;
+    
+    [SerializeField]
+    private float distance = 10.0f;
+    
+    [SerializeField]
+    private float sensitivity = 5.0f; 
+    
     private float x = 0.0f;
+    
     private float y = 0.0f;
 
     void Start()

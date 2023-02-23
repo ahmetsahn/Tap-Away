@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 603329539804319434}
   - component: {fileID: 603329539804319414}
   - component: {fileID: 603329539804319413}
+  - component: {fileID: -923033852754969611}
   m_Layer: 0
   m_Name: CubeXY
   m_TagString: Untagged
@@ -99,7 +100,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.93, y: 0.93, z: 0.93}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &603329539804319414
 MonoBehaviour:
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeData: {fileID: 11400000, guid: 0b9722a6323766549b669a786cfff84e, type: 2}
+  cubeMovement: {fileID: -923033852754969611}
 --- !u!54 &603329539804319413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,6 +132,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-923033852754969611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603329539804319435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145b6f44f8a2f484496e00473ef3c51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &603329540070134425
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603329540070134424}
   - component: {fileID: 603329540070134407}
-  - component: {fileID: 3919964635256552664}
+  - component: {fileID: 8039664853473828293}
   m_Layer: 0
   m_Name: 81464
   m_TagString: Untagged
@@ -215,7 +229,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3919964635256552664
+--- !u!114 &8039664853473828293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,7 +238,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 603329540070134425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80911452ee00e92498b6617da0a2dee0, type: 3}
+  m_Script: {fileID: 11500000, guid: 13eca23bbcb186e46880d263a65836ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &603329540748840693
@@ -237,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603329540748840692}
   - component: {fileID: 603329540748840691}
-  - component: {fileID: 6742331719985217839}
+  - component: {fileID: 17551549839445772}
   m_Layer: 0
   m_Name: 81464
   m_TagString: Untagged
@@ -312,7 +326,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6742331719985217839
+--- !u!114 &17551549839445772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,7 +335,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 603329540748840693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80911452ee00e92498b6617da0a2dee0, type: 3}
+  m_Script: {fileID: 11500000, guid: 13eca23bbcb186e46880d263a65836ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &603329540859397559
